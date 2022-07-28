@@ -6,15 +6,16 @@ import duration from 'dayjs/plugin/duration';
 dayjs.extend(duration);
 
 /**
- * 
+ *
  * @param timestamp 时间戳
  * @returns 获得'YYYY/MM/DD HH:mm' 格式时间
  */
 
 export function getFormatDate(timestamp) {
-  if (!timestamp) return
-  const len = timestamp.toString().length
-  if (len === 10) { //秒级时间戳
+  if (!timestamp) return;
+  const len = timestamp.toString().length;
+  if (len === 10) {
+    //秒级时间戳
     return dayjs(timestamp * 1000).format('YYYY/MM/DD HH:mm');
   } else {
     return dayjs(Number(timestamp)).format('YYYY/MM/DD HH:mm');
@@ -29,18 +30,18 @@ export function getFormatDate(timestamp) {
  * @returns {String}
  */
 export function plusXing(str, frontLen, endLen) {
-  if (!str) return
+  if (!str) return;
   var xing = '****';
   return str.substring(0, frontLen) + xing + str.substring(str.length - endLen);
 }
 
 // vant pick组件 时间选择表单格式化 很多页面用到
 export function formatter(value) {
-  if (+value === 0) return "";
+  if (+value === 0) return '';
   if (!isNaN(Number(value))) {
-    return getFormatDate(value)
+    return getFormatDate(value);
   } else {
-    return value
+    return value;
   }
 }
 
@@ -51,7 +52,24 @@ export function formatter(value) {
 export async function copyToClipBoard(address) {
   if (!navigator.clipboard) {
     // Clipboard API not available
-    return
+    return;
   }
-  return navigator.clipboard.writeText(address)
+  return navigator.clipboard.writeText(address);
+}
+
+/**
+ * 节流
+ * @param {Function} callback 回调函数
+ * @param {Number} duration 节流间隔时间
+ */
+export function handleThrottle(callback, duration = 70) {
+  let throttleTimer;
+  return () => {
+    if (throttleTimer) return;
+
+    throttleTimer = setTimeout(() => {
+      callback();
+      throttleTimer = null;
+    }, duration);
+  };
 }

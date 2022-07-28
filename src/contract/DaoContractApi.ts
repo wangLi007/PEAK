@@ -1,6 +1,6 @@
 import { DAO_ADDR_CONT } from "./config";
 import { USDT_ADDR } from "./coinConfig";
-import { useAppStore } from "@store/index";
+import { useAppStore } from "@store/appStore";
 import { toRaw } from "vue";
 import i18n from "@/locales/i18n";
 import router from "@/router";

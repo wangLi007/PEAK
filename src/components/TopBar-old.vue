@@ -1,6 +1,6 @@
 <!-- 顶部栏 -->
 <script setup lang="ts">
-  import { useAppStore } from '@/store/index';
+  import { useAppStore } from '@/store/appStore';
   import router from '@/router';
   import { getCurrentInstance, reactive, ref, watchEffect } from 'vue';
   import { useRoute } from 'vue-router';

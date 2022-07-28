@@ -5,8 +5,8 @@
 </template>
 
 <script lang="ts">
-  import TopBar from '@cps/TopBar.vue';
-  import { useAppStore } from '@store/index';
+  import TopBar from '@/components/TopBar/index.vue';
+  import { useAppStore } from '@store/appStore';
   import { ref, nextTick } from 'vue';
   import i18n from '@/locales/i18n';
   // import { Toast } from 'vant';

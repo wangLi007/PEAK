@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import $load from '@cps/GlobalLoading';
-import { useAppStore } from '@store/index';
+import { useAppStore } from '@store/appStore';
 
 const routes: Array<RouteRecordRaw> = [
   {

@@ -1,0 +1,231 @@
+<!-- 顶部栏 -->
+<script setup lang="ts">
+import { useAppStore } from '@/store/appStore';
+import router from '@/router';
+import { getCurrentInstance, reactive, ref, watchEffect } from 'vue';
+import { useRoute } from 'vue-router';
+import { plusXing } from '@/utils/tools';
+
+const appStore = useAppStore();
+const gThis = getCurrentInstance().appContext.config.globalProperties;
+// 语言列表
+const langList = reactive([
+  {
+    id: 1,
+    name: '中文',
+    target: 'cn',
+    active: false,
+  },
+  {
+    id: 2,
+    name: 'English',
+    target: 'en',
+    active: true,
+  },
+]);
+
+langList.forEach(item => {
+  item.active = item.target === appStore.curLang;
+});
+
+/**
+ * 选择语言
+ */
+function pickLang(lang) {
+  console.log('lang..', lang);
+  gThis.$i18n.locale = lang.target;
+
+  appStore.setLang(lang.target);
+
+  langList.forEach(item => {
+    item.active = lang.id === item.id;
+  });
+}
+
+const handleScroll = type => {
+  const typeList = ['nft', 'peak_boy', 'mint', 'team', 'roadmap', 'about'];
+  if (!typeList.includes(type)) return;
+
+  if (type === typeList[0]) {
+    window.scrollTo({
+      top: 487,
+      behavior: 'smooth',
+    });
+  } else if (type === typeList[1]) {
+    window.scrollTo({
+      top: 959,
+      behavior: 'smooth',
+    });
+  } else if (type === typeList[2]) {
+    window.scrollTo({
+      top: 1873,
+      behavior: 'smooth',
+    });
+  } else if (type === typeList[3]) {
+    window.scrollTo({
+      top: 4411,
+      behavior: 'smooth',
+    });
+  } else if (type === typeList[4]) {
+    window.scrollTo({
+      top: 5058,
+      behavior: 'smooth',
+    });
+  } else if (type === typeList[5]) {
+    window.scrollTo({
+      top: 3148,
+      behavior: 'smooth',
+    });
+  }
+};
+</script>
+
+<template>
+  <header>
+    <div class="logo-icon">
+      <img src="@img/PEAK_BOY.png" alt="" />
+    </div>
+    <div class="link-group">
+      <div class="link-item" @click="handleScroll('nft')">NFT</div>
+      <div class="link-item" @click="handleScroll('peak_boy')">PEAK BOY</div>
+      <div class="link-item" @click="handleScroll('mint')">MINT</div>
+      <div class="link-item" @click="handleScroll('team')">TEAM</div>
+      <div class="link-item" @click="handleScroll('roadmap')">ROADMAP</div>
+      <div class="link-item" @click="handleScroll('about')">ABOUT</div>
+    </div>
+    <div class="link-official">
+      <div class="twitter">
+        <a href="https://twitter.com/PeakBoy_NFT" target="_blank">
+          <img src="@img/twitter.png" alt="" />
+        </a>
+      </div>
+      <div class="ins">
+        <a href="https://www.instagram.com/peakboynft/" target="_blank">
+          <img src="@img/ins.png" alt="" />
+        </a>
+      </div>
+      <div class="discord">
+        <a href="https://discord.gg/ZdtpwEPHBe" target="_blank">
+          <img src="@img/discord.png" alt="" />
+        </a>
+      </div>
+    </div>
+    <div class="sign" @click="appStore.linkWallet">
+      <span v-if="!appStore.defaultAccount">SIGN IN</span>
+      <span v-else>{{ plusXing(appStore.defaultAccount, 4, 4) }}</span>
+    </div>
+    <div
+      class="lang-wrap"
+      @mouseleave="appStore.setIsShowLangPanel(!appStore.isShowLangPanel)"
+      @mouseenter="appStore.setIsShowLangPanel(!appStore.isShowLangPanel)"
+    >
+      <div style="display: flex">
+        <div class="current">
+          <img class="language" src="@img/language.png" alt="" />
+          {{ $t('header.1') }}
+          <img class="arrow-btm" src="@img/arrow-btm.png" alt="" />
+        </div>
+      </div>
+      <div class="panel" v-show="appStore.isShowLangPanel">
+        <li class="lang-item" v-for="lang in langList" :key="lang.id" @click="pickLang(lang)">
+          {{ lang.name }}
+        </li>
+      </div>
+    </div>
+  </header>
+</template>
+
+<style lang="scss" scoped>
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.5);
+  filter: blur(undefinedpx);
+  font-size: 14px;
+  color: #fff;
+  padding: 0 145px 0 145px;
+  @include flexPos(flex-start, center);
+  z-index: 9999;
+  a {
+    color: #fff;
+  }
+  .logo-icon {
+    margin-right: 99px;
+    img {
+      width: 92px;
+    }
+  }
+  .link-group {
+    @include flexPos(space-between, center);
+    flex: 1;
+    .link-item {
+      cursor: pointer;
+    }
+  }
+  .link-official {
+    @include flexPos(flex-start, center);
+    margin-left: 87px;
+    .twitter {
+      margin-right: 50px;
+      img {
+        width: 23px;
+      }
+    }
+    .ins {
+      margin-right: 50px;
+
+      img {
+        width: 23px;
+      }
+    }
+    .discord {
+      img {
+        width: 28px;
+      }
+    }
+  }
+  .sign {
+    margin-left: 90px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 28px;
+    margin-right: 69px;
+    cursor: pointer;
+  }
+
+  .lang-wrap {
+    position: relative;
+    .current {
+      @include flexPos(center);
+      padding: 10px 27px 10px 18px;
+      background-color: rgba(15, 0, 0, 0.5);
+      .language {
+        width: 25px;
+        margin-right: 3px;
+      }
+      .arrow-btm {
+        padding-top: 3px;
+        width: 11px;
+        margin-left: 3px;
+      }
+    }
+    .panel {
+      position: absolute;
+      bottom: -50px;
+      right: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      li {
+        padding-bottom: 5px;
+        cursor: pointer;
+        line-height: 20px;
+      }
+    }
+  }
+}
+</style>

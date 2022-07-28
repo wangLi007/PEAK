@@ -2,7 +2,7 @@
 
 // import { useAppStore } from '@store/appStore';
 import { ethers } from 'ethers';
-import { useAppStore } from '@/store/index';
+import { useAppStore } from '@store/appStore';
 import { toRaw } from 'vue';
 import { Toast, Button } from 'vant';
 import i18n from '@/locales/i18n';
@@ -54,7 +54,7 @@ export default class {
    * @returns {Number} 余额
    */
   async getOriginBalan() {
-    let tempBalan = await this.coinObj.balanceOf(this.defaultAccount).catch((err) => err);
+    let tempBalan = await this.coinObj.balanceOf(this.defaultAccount).catch(err => err);
     tempBalan = +tempBalan ? tempBalan : 0;
     tempBalan = String(tempBalan);
     return tempBalan;
@@ -77,24 +77,24 @@ export default class {
    */
   async auth(contractAddr) {
     return new Promise((resolve, reject) => {
-      Toast.success($t('msg.31'))
+      Toast.success($t('msg.31'));
       this.coinObj
         .approve(contractAddr, ethers.constants.MaxUint256)
-        .then(async (resp) => {
-          console.log(resp, "resprespresp");
+        .then(async resp => {
+          console.log(resp, 'resprespresp');
           Toast.loading({
             message: $t('msg.29'),
             forbidClick: true,
           });
-          const result = await resp?.wait()
+          const result = await resp?.wait();
           console.log(result);
-          Toast.success($t('msg.3'))
+          Toast.success($t('msg.3'));
           return resolve(true);
         })
         .catch(err => {
           console.log(err);
           return reject(false);
         });
-    })
+    });
   }
 }
