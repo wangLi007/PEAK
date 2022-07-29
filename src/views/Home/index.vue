@@ -295,7 +295,7 @@ const startAnimation = dom => {
           </p>
         </div>
         <div class="boy-1">
-          <img src="@img/boy-1.png" alt="" />
+          <img src="@img/boy-1.jpg" alt="" />
         </div>
         <div class="boy-2">
           <img src="@img/boy-2.png" alt="" />
