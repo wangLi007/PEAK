@@ -19,11 +19,11 @@ const startAnimation = dom => {
 };
 
 // 背景滚动
-onMounted(() => {
-  const main = document.querySelector('main');
+// onMounted(() => {
+//   const main = document.querySelector('main');
 
-  startAnimation(main);
-});
+//   startAnimation(main);
+// });
 </script>
 
 <template>
@@ -295,7 +295,7 @@ onMounted(() => {
           </p>
         </div>
         <div class="boy-1">
-          <img src="@img/boy-1.jpg" alt="" />
+          <img src="@img/boy-1.png" alt="" />
         </div>
         <div class="boy-2">
           <img src="@img/boy-2.png" alt="" />
