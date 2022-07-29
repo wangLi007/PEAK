@@ -47,33 +47,39 @@ const handleScroll = type => {
   if (!typeList.includes(type)) return;
 
   if (type === typeList[0]) {
+    const dom = <HTMLImageElement>document.querySelector('.section-nft');
     window.scrollTo({
-      top: 487,
+      top: dom.offsetTop,
       behavior: 'smooth',
     });
   } else if (type === typeList[1]) {
+    const dom = <HTMLImageElement>document.querySelector('.section-bgc');
     window.scrollTo({
-      top: 959,
+      top: dom.offsetTop,
       behavior: 'smooth',
     });
   } else if (type === typeList[2]) {
+    const dom = <HTMLImageElement>document.querySelector('.section-mint');
     window.scrollTo({
-      top: 1873,
+      top: dom.offsetTop,
       behavior: 'smooth',
     });
   } else if (type === typeList[3]) {
+    const dom = <HTMLImageElement>document.querySelector('.section-term');
     window.scrollTo({
-      top: 4411,
+      top: dom.offsetTop,
       behavior: 'smooth',
     });
   } else if (type === typeList[4]) {
+    const dom = <HTMLImageElement>document.querySelector('.route-map');
     window.scrollTo({
-      top: 5058,
+      top: dom.offsetTop,
       behavior: 'smooth',
     });
   } else if (type === typeList[5]) {
+    const dom = <HTMLImageElement>document.querySelector('footer');
     window.scrollTo({
-      top: 3148,
+      top: dom.offsetTop,
       behavior: 'smooth',
     });
   }
@@ -164,6 +170,7 @@ header {
     flex: 1;
     .link-item {
       cursor: pointer;
+      flex-shrink: 0;
     }
   }
   .link-official {
@@ -194,6 +201,7 @@ header {
     color: #ffffff;
     line-height: 28px;
     margin-right: 69px;
+    flex-shrink: 0;
     cursor: pointer;
   }
 
@@ -215,7 +223,7 @@ header {
     }
     .panel {
       position: absolute;
-      bottom: -50px;
+      bottom: -65px;
       right: 0;
       width: 100%;
       background-color: rgba(0, 0, 0, 0.5);
@@ -223,7 +231,7 @@ header {
       li {
         padding-bottom: 5px;
         cursor: pointer;
-        line-height: 20px;
+        line-height: 30px;
       }
     }
   }

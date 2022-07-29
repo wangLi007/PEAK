@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import Home from "../views/Home/index.vue";
 import $load from '@cps/GlobalLoading';
 import { useAppStore } from '@store/appStore';
 
@@ -7,7 +7,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: "home",
-    component: HomeView,
+    component: Home,
   },
   // {
   //   path: "/about",

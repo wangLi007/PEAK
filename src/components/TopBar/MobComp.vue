@@ -138,48 +138,50 @@ const handleScroll = type => {
       leave-active-class="animate__animated animate__fadeOutUp"
     >
       <div class="menu-panel" v-show="isShowMenu">
-        <div class="menu-head">
-          <div class="logo">
-            <img src="@img/phone/logo.png" alt="" />
+        <div class="content">
+          <div class="menu-head">
+            <div class="logo">
+              <img src="@img/phone/logo.png" alt="" />
+            </div>
+            <div class="close" @click="isShowMenu = !isShowMenu">
+              <img src="@img/phone/close.png" alt="" />
+            </div>
           </div>
-          <div class="close" @click="isShowMenu = !isShowMenu">
-            <img src="@img/phone/close.png" alt="" />
+          <div class="menu-wrap">
+            <div
+              class="menu-item"
+              v-for="(item, index) in menuList"
+              :key="index"
+              @click="handleScroll(item.alias)"
+            >
+              <span>{{ $t(item.name) }}</span>
+            </div>
           </div>
-        </div>
-        <div class="menu-wrap">
-          <div
-            class="menu-item"
-            v-for="(item, index) in menuList"
-            :key="index"
-            @click="handleScroll(item.alias)"
-          >
-            <span>{{ $t(item.name) }}</span>
+          <div class="lang" @click="appStore.setIsShowLangPanel(!appStore.isShowLangPanel)">
+            <div class="text">
+              <img class="language" src="@img/language.png" alt="" />
+              {{ $t('header.1') }}
+            </div>
+            <img
+              class="arrow-btm"
+              :style="{ transform: appStore.isShowLangPanel ? 'none' : 'rotate(270deg)' }"
+              src="@img/arrow-btm.png"
+              alt=""
+            />
           </div>
-        </div>
-        <div class="lang" @click="appStore.setIsShowLangPanel(!appStore.isShowLangPanel)">
-          <div class="text">
-            <img class="language" src="@img/language.png" alt="" />
-            {{ $t('header.1') }}
+          <div class="lang-type" v-show="appStore.isShowLangPanel">
+            <div
+              class="lang-item"
+              v-for="(item, index) in langList"
+              :key="index"
+              @click="pickLang(item)"
+            >
+              {{ item.name }}
+            </div>
           </div>
-          <img
-            class="arrow-btm"
-            :style="{ transform: appStore.isShowLangPanel ? 'none' : 'rotate(270deg)' }"
-            src="@img/arrow-btm.png"
-            alt=""
-          />
-        </div>
-        <div class="lang-type" v-show="appStore.isShowLangPanel">
-          <div
-            class="lang-item"
-            v-for="(item, index) in langList"
-            :key="index"
-            @click="pickLang(item)"
-          >
-            {{ item.name }}
+          <div class="sign" @click="appStore.linkWallet">
+            {{ appStore.defaultAccount ? plusXing(appStore.defaultAccount, 4, 4) : 'SIGN IN' }}
           </div>
-        </div>
-        <div class="sign" @click="appStore.linkWallet">
-          {{ appStore.defaultAccount ? plusXing(appStore.defaultAccount, 4, 4) : 'SIGN IN' }}
         </div>
         <div class="footer">
           <div class="text">{{ $t('home.55') }}</div>
@@ -235,6 +237,8 @@ header {
   z-index: 9999;
 }
 .menu-panel {
+  @include flexPos(space-between,space-between);
+  flex-direction: column;
   position: fixed;
   left: 0;
   top: 0;
@@ -244,7 +248,7 @@ header {
   height: 100vh; // 菜单栏的高度
   z-index: 10000;
   color: #fff;
-  padding: 14px 34px 33px;
+  padding: 46px 34px 32px;
 
   .menu-wrap {
     margin-top: 10px;
