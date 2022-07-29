@@ -150,12 +150,12 @@ header {
   box-sizing: border-box;
   height: 80px;
   background: rgba(0, 0, 0, 0.5);
-  filter: blur(undefinedpx);
   font-size: 14px;
   color: #fff;
   padding: 0 145px 0 145px;
   @include flexPos(flex-start, center);
   z-index: 9999;
+  backdrop-filter: blur(2px);
   a {
     color: #fff;
   }

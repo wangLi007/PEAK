@@ -221,6 +221,7 @@ header {
   padding: 0 26px 0 23px;
   z-index: 9999;
   color: #fff;
+  backdrop-filter: blur(2px);
   .logo-icon {
     img {
       width: 55px;
