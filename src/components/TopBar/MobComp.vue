@@ -10,10 +10,10 @@ const gThis = getCurrentInstance().appContext.config.globalProperties;
 const isShowMenu = ref(false);
 // 菜单列表
 const menuList = reactive([
-  {
-    name: 'header.6',
-    alias: 'nft',
-  },
+  // {
+  //   name: 'header.6',
+  //   alias: 'nft',
+  // },
   {
     name: 'header.7',
     alias: 'peak_boy',

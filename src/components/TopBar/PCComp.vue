@@ -92,7 +92,7 @@ const handleScroll = type => {
       <img src="@img/PEAK_BOY.png" alt="" />
     </div>
     <div class="link-group">
-      <div class="link-item" @click="handleScroll('nft')">{{ $t('header.6') }}</div>
+      <!-- <div class="link-item" @click="handleScroll('nft')">{{ $t('header.6') }}</div> -->
       <div class="link-item" @click="handleScroll('peak_boy')">{{ $t('header.7') }}</div>
       <div class="link-item" @click="handleScroll('mint')">{{ $t('header.2') }}</div>
       <div class="link-item" @click="handleScroll('team')">{{ $t('header.3') }}</div>
