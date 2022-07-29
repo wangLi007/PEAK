@@ -52,7 +52,7 @@ watch(
 const langList = reactive([
   {
     id: 1,
-    name: '中文',
+    name: '繁体中文',
     target: 'cn',
     active: false,
   },

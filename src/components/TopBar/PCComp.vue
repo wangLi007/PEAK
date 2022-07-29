@@ -12,7 +12,7 @@ const gThis = getCurrentInstance().appContext.config.globalProperties;
 const langList = reactive([
   {
     id: 1,
-    name: '中文',
+    name: '繁体中文',
     target: 'cn',
     active: false,
   },
@@ -224,7 +224,8 @@ header {
     }
     .panel {
       position: absolute;
-      bottom: -65px;
+      bottom: 0;
+      transform: translateY(100%);
       right: 0;
       width: 100%;
       background-color: rgba(0, 0, 0, 0.5);
