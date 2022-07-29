@@ -65,7 +65,7 @@ const handleScroll = type => {
       behavior: 'smooth',
     });
   } else if (type === typeList[3]) {
-    const dom = <HTMLImageElement>document.querySelector('.section-term');
+    const dom = <HTMLImageElement>document.querySelector('.section-partner');
     window.scrollTo({
       top: dom.offsetTop,
       behavior: 'smooth',
@@ -92,12 +92,12 @@ const handleScroll = type => {
       <img src="@img/PEAK_BOY.png" alt="" />
     </div>
     <div class="link-group">
-      <div class="link-item" @click="handleScroll('nft')">NFT</div>
-      <div class="link-item" @click="handleScroll('peak_boy')">PEAK BOY</div>
-      <div class="link-item" @click="handleScroll('mint')">MINT</div>
-      <div class="link-item" @click="handleScroll('team')">TEAM</div>
-      <div class="link-item" @click="handleScroll('roadmap')">ROADMAP</div>
-      <div class="link-item" @click="handleScroll('about')">ABOUT</div>
+      <div class="link-item" @click="handleScroll('nft')">{{ $t('header.6') }}</div>
+      <div class="link-item" @click="handleScroll('peak_boy')">{{ $t('header.7') }}</div>
+      <div class="link-item" @click="handleScroll('mint')">{{ $t('header.2') }}</div>
+      <div class="link-item" @click="handleScroll('team')">{{ $t('header.3') }}</div>
+      <div class="link-item" @click="handleScroll('roadmap')">{{ $t('header.4') }}</div>
+      <div class="link-item" @click="handleScroll('about')">{{ $t('header.5') }}</div>
     </div>
     <div class="link-official">
       <div class="twitter">
@@ -117,7 +117,7 @@ const handleScroll = type => {
       </div>
     </div>
     <div class="sign" @click="appStore.linkWallet">
-      <span v-if="!appStore.defaultAccount">SIGN IN</span>
+      <span v-if="!appStore.defaultAccount">{{ $t('header.8') }}</span>
       <span v-else>{{ plusXing(appStore.defaultAccount, 4, 4) }}</span>
     </div>
     <div
@@ -211,6 +211,7 @@ header {
       @include flexPos(center);
       padding: 10px 27px 10px 18px;
       background-color: rgba(15, 0, 0, 0.5);
+      flex-shrink: 0;
       .language {
         width: 25px;
         margin-right: 3px;

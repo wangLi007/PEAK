@@ -1,6 +1,13 @@
 export default {
   header: {
     1: 'language',
+    2: 'MINT',
+    3: 'TEAM',
+    4: 'ROADMAP',
+    5: 'ABOUT',
+    6: 'NFT',
+    7: 'PEAK BOY',
+    8: 'SIGN IN',
   },
   //
   home: {
@@ -54,8 +61,8 @@ export default {
     48: 'Create Metaverse Space or Seek Collaboration Space, on the Decision of Club Members',
     49: 'Design and Building of PeakBoy Product 3.0 -- Land NFTs',
     50: 'PeakBoy 3.0 GameFi Development',
-    51: '',
-    52: '',
+    51: 'GET IN TOUCH WITH US',
+    52: "We'd love to hear your thoughts",
     53: '',
     54: 'Partner',
     55: 'Our community',

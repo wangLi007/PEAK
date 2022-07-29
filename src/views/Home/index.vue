@@ -19,11 +19,11 @@ const startAnimation = dom => {
 };
 
 // 背景滚动
-// onMounted(() => {
-//   const main = document.querySelector('main');
+onMounted(() => {
+  const main = document.querySelector('main');
 
-//   startAnimation(main);
-// });
+  startAnimation(main);
+});
 </script>
 
 <template>
@@ -475,8 +475,8 @@ const startAnimation = dom => {
       </div>
     </section>
     <footer>
-      <p class="text">GET IN TOUCH WITH US</p>
-      <p class="text">We'd love to hear your thoughts</p>
+      <p class="text">{{ $t('home.51') }}</p>
+      <p class="text">{{ $t('home.52') }}</p>
       <div class="bottom">
         <p>{{ $t('home.55') }}</p>
         <div class="link-wrap">

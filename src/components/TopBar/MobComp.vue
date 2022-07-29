@@ -11,27 +11,27 @@ const isShowMenu = ref(false);
 // 菜单列表
 const menuList = reactive([
   {
-    name: 'NFT',
+    name: 'header.6',
     alias: 'nft',
   },
   {
-    name: 'PEAK BOY',
+    name: 'header.7',
     alias: 'peak_boy',
   },
   {
-    name: 'MINT',
+    name: 'header.2',
     alias: 'mint',
   },
   {
-    name: 'TEAM',
+    name: 'header.3',
     alias: 'team',
   },
   {
-    name: 'ROADMAP',
+    name: 'header.4',
     alias: 'roadmap',
   },
   {
-    name: 'ABOUT',
+    name: 'header.5',
     alias: 'about',
   },
 ]);
@@ -87,33 +87,39 @@ const handleScroll = type => {
   if (!typeList.includes(type)) return;
 
   if (type === typeList[0]) {
+    const dom = <HTMLImageElement>document.querySelector('.section-nft');
     window.scrollTo({
-      top: 925,
+      top: dom.offsetTop,
       behavior: 'smooth',
     });
   } else if (type === typeList[1]) {
+    const dom = <HTMLImageElement>document.querySelector('.section-bgc');
     window.scrollTo({
-      top: 525,
+      top: dom.offsetTop,
       behavior: 'smooth',
     });
   } else if (type === typeList[2]) {
+    const dom = <HTMLImageElement>document.querySelector('.section-mint');
     window.scrollTo({
-      top: 1325,
+      top: dom.offsetTop,
       behavior: 'smooth',
     });
   } else if (type === typeList[3]) {
+    const dom = <HTMLImageElement>document.querySelector('.section-term');
     window.scrollTo({
-      top: 3525,
+      top: dom.offsetTop,
       behavior: 'smooth',
     });
   } else if (type === typeList[4]) {
+    const dom = <HTMLImageElement>document.querySelector('.route-map');
     window.scrollTo({
-      top: 4925,
+      top: dom.offsetTop,
       behavior: 'smooth',
     });
   } else if (type === typeList[5]) {
+    const dom = <HTMLImageElement>document.querySelector('footer');
     window.scrollTo({
-      top: 6419,
+      top: dom.offsetTop,
       behavior: 'smooth',
     });
   }
@@ -180,7 +186,7 @@ const handleScroll = type => {
             </div>
           </div>
           <div class="sign" @click="appStore.linkWallet">
-            {{ appStore.defaultAccount ? plusXing(appStore.defaultAccount, 4, 4) : 'SIGN IN' }}
+            {{ appStore.defaultAccount ? plusXing(appStore.defaultAccount, 4, 4) : $t('header.8') }}
           </div>
         </div>
         <div class="footer">
@@ -237,7 +243,7 @@ header {
   z-index: 9999;
 }
 .menu-panel {
-  @include flexPos(space-between,space-between);
+  @include flexPos(space-between, space-between);
   flex-direction: column;
   position: fixed;
   left: 0;
