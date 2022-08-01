@@ -159,13 +159,15 @@ const startAnimation = dom => {
             </div>
           </div>
           <ul>
-            <li>{{ $t('home.31') }}</li>
-            <li>{{ $t('home.32') }}</li>
-            <li>{{ $t('home.33') }}</li>
-            <li>{{ $t('home.34') }}</li>
+            <li class="done">{{ $t('home.31') }}</li>
+            <li class="done">{{ $t('home.32') }}</li>
+            <li class="done">{{ $t('home.33') }}</li>
+            <li class="done">{{ $t('home.34') }}</li>
+            <li class="done">{{ $t('home.53') }}</li>
             <li>
               {{ $t('home.35') }}
             </li>
+            <li>{{ $t('home.63') }}</li>
             <li>{{ $t('home.36') }}</li>
             <li>{{ $t('home.37') }}</li>
             <li>{{ $t('home.38') }}</li>
@@ -403,13 +405,15 @@ const startAnimation = dom => {
               </div>
             </div>
             <ul>
-              <li>{{ $t('home.31') }}</li>
-              <li>{{ $t('home.32') }}</li>
-              <li>{{ $t('home.33') }}</li>
-              <li>{{ $t('home.34') }}</li>
+              <li class="done">{{ $t('home.31') }}</li>
+              <li class="done">{{ $t('home.32') }}</li>
+              <li class="done">{{ $t('home.33') }}</li>
+              <li class="done">{{ $t('home.34') }}</li>
+              <li class="done">{{ $t('home.53') }}</li>
               <li>
                 {{ $t('home.35') }}
               </li>
+              <li>{{ $t('home.63') }}</li>
               <li>{{ $t('home.36') }}</li>
               <li>{{ $t('home.37') }}</li>
               <li>{{ $t('home.38') }}</li>

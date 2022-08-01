@@ -386,6 +386,12 @@
             align-self: flex-start;
             flex-shrink: 0;
           }
+          &.done::before {
+            background: url('~@img/diamond-done.svg') no-repeat;
+          }
+          &.done{
+            color: #F4543B;
+          }
         }
       }
       .arrow {
