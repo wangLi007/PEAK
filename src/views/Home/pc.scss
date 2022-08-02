@@ -389,8 +389,8 @@
           &.done::before {
             background: url('~@img/diamond-done.svg') no-repeat;
           }
-          &.done{
-            color: #F4543B;
+          &.done {
+            color: #f4543b;
           }
         }
       }
@@ -416,6 +416,10 @@
           margin-right: 81px;
         }
         .partner-item:nth-child(2) img {
+          width: 182px;
+          margin-right: 81px;
+        }
+        .partner-item:nth-child(3) img {
           width: 182px;
         }
       }

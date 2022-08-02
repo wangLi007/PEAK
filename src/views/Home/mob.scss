@@ -357,6 +357,7 @@
       margin-bottom: 33px;
     }
     .our-partner-wrap {
+      flex-wrap: wrap;
       @include flexPos(center);
       padding-bottom: 77px;
     }
@@ -364,8 +365,13 @@
       &:nth-child(1) img {
         width: 91px;
         margin-right: 50px;
+        margin-bottom: 30px;
       }
       &:nth-child(2) img {
+        width: 124px;
+        margin-bottom: 30px;
+      }
+      &:nth-child(3) img {
         width: 124px;
       }
     }

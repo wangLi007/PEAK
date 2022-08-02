@@ -226,7 +226,14 @@ onMounted(() => {
             <a href="https://bad-hood.com" target="_blank"><img src="@img/BAD.png" alt="" /></a>
           </div>
           <div class="partner-item">
-            <a href="https://galaxy.eco/PeakBoy" target="_blank"><img src="@img/GALA.png" alt="" /></a>
+            <a href="https://galaxy.eco/PeakBoy" target="_blank">
+              <img src="@img/GALA.png" alt="" />
+            </a>
+          </div>
+          <div class="partner-item">
+            <a href="https://www.element.market/" target="_blank">
+              <img src="@img/element.png" alt="" />
+            </a>
           </div>
         </div>
       </div>
@@ -473,7 +480,14 @@ onMounted(() => {
             <a href="https://bad-hood.com" target="_blank"><img src="@img/BAD.png" alt="" /></a>
           </div>
           <div class="partner-item">
-            <a href="https://galaxy.eco/PeakBoy" target="_blank"><img src="@img/GALA.png" alt="" /></a>
+            <a href="https://galaxy.eco/PeakBoy" target="_blank">
+              <img src="@img/GALA.png" alt="" />
+            </a>
+          </div>
+          <div class="partner-item">
+            <a href="https://www.element.market/" target="_blank">
+              <img src="@img/element.png" alt="" />
+            </a>
           </div>
         </div>
       </div>
