@@ -117,7 +117,7 @@ onMounted(() => {
         </p>
       </div>
       <div class="img">
-        <img src="@img/phone/nft.png" alt="" />
+        <a href="http://bad-hood.com" target="_blank"><img src="@img/nft.png" alt="" /></a>
       </div>
     </section>
     <section class="section-term">
@@ -226,7 +226,7 @@ onMounted(() => {
             <a href="https://bad-hood.com" target="_blank"><img src="@img/BAD.png" alt="" /></a>
           </div>
           <div class="partner-item">
-            <a href="https://galaxy.eco" target="_blank"><img src="@img/GALA.png" alt="" /></a>
+            <a href="https://galaxy.eco/PeakBoy" target="_blank"><img src="@img/GALA.png" alt="" /></a>
           </div>
         </div>
       </div>
@@ -358,7 +358,7 @@ onMounted(() => {
           </p>
         </div>
         <div class="img">
-          <img src="@img/nft.png" alt="" />
+          <a href="http://bad-hood.com" target="_blank"><img src="@img/nft.png" alt="" /></a>
         </div>
       </div>
     </section>
@@ -473,7 +473,7 @@ onMounted(() => {
             <a href="https://bad-hood.com" target="_blank"><img src="@img/BAD.png" alt="" /></a>
           </div>
           <div class="partner-item">
-            <a href="https://galaxy.eco" target="_blank"><img src="@img/GALA.png" alt="" /></a>
+            <a href="https://galaxy.eco/PeakBoy" target="_blank"><img src="@img/GALA.png" alt="" /></a>
           </div>
         </div>
       </div>
