@@ -362,6 +362,10 @@
       padding-bottom: 77px;
     }
     .partner-item {
+      width: 50%;
+      img{
+        margin: 0 auto;
+      }
       &:nth-child(1) img {
         width: 91px;
         margin-right: 50px;
