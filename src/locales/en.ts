@@ -31,7 +31,7 @@ export default {
     18: 'Team',
     19: 'Founder',
     20: 'COO',
-    21: 'Development Expert',
+    21: 'CTO',
     22: 'Ambassador',
     23: 'Crypto expert and NFT enthusiast',
     24: 'NFT culture enthusiast, has extensive experience in project operation.',
