@@ -4,6 +4,29 @@ import { useAppStore } from '@store/appStore';
 
 const appStore = useAppStore();
 
+const ourPartners = [
+  {
+    url: require('@img/BAD.png'),
+    link: 'https://bad-hood.com',
+  },
+  {
+    url: require('@img/element.png'),
+    link: 'https://www.element.market',
+  },
+  {
+    url: require('@img/ourpartner/fist-nft.png'),
+    link: '',
+  },
+  {
+    url: require('@img/ourpartner/pg-nft.png'),
+    link: 'https://www.fstnft.com/',
+  },
+  {
+    url: require('@img/ourpartner/dappback.png'),
+    link: '',
+  },
+];
+
 const startAnimation = dom => {
   let start = Date.now();
 
@@ -102,9 +125,6 @@ onMounted(() => {
             <p class="text-gap">
               {{ $t('home.15') }}
             </p>
-            <!-- <div class="desc-img">
-            <img src="@img/refer.png" alt="" />
-          </div> -->
           </a>
         </div>
       </div>
@@ -222,18 +242,9 @@ onMounted(() => {
       <div class="our-partner">
         <div class="title">{{ $t('home.54') }}</div>
         <div class="our-partner-wrap">
-          <div class="partner-item">
-            <a href="https://bad-hood.com" target="_blank"><img src="@img/BAD.png" alt="" /></a>
-          </div>
-          <div class="partner-item">
-            <a href="https://galaxy.eco/PeakBoy" target="_blank">
-              <img src="@img/GALA.png" alt="" />
-            </a>
-          </div>
-          <div class="partner-item">
-            <a href="https://www.element.market/" target="_blank">
-              <img src="@img/element.png" alt="" />
-            </a>
+          <div class="partner-item" v-for="(item, index) in ourPartners" :key="index">
+            <a v-if="item.link" :href="item.link" target="_blank"><img :src="item.url" alt="" /></a>
+            <img v-else :src="item.url" alt="" />
           </div>
         </div>
       </div>
@@ -259,7 +270,6 @@ onMounted(() => {
   </main>
   <main class="pc-main" v-else>
     <div class="banner">
-      <!-- <img src="@img/banner.png" alt="" /> -->
       <video
         muted="false"
         autoplay
@@ -476,18 +486,9 @@ onMounted(() => {
       <div class="our-partner">
         <div class="title">{{ $t('home.54') }}</div>
         <div class="our-partner-wrap">
-          <div class="partner-item">
-            <a href="https://bad-hood.com" target="_blank"><img src="@img/BAD.png" alt="" /></a>
-          </div>
-          <div class="partner-item">
-            <a href="https://galaxy.eco/PeakBoy" target="_blank">
-              <img src="@img/GALA.png" alt="" />
-            </a>
-          </div>
-          <div class="partner-item">
-            <a href="https://www.element.market/" target="_blank">
-              <img src="@img/element.png" alt="" />
-            </a>
+          <div class="partner-item" v-for="(item, index) in ourPartners" :key="index">
+            <a v-if="item.link" :href="item.link" target="_blank"><img :src="item.url" alt="" /></a>
+            <img v-else :src="item.url" alt="" />
           </div>
         </div>
       </div>
