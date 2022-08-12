@@ -15,11 +15,11 @@ const ourPartners = [
   },
   {
     url: require('@img/ourpartner/fist-nft.png'),
-    link: '',
+    link: 'https://www.fstnft.com',
   },
   {
     url: require('@img/ourpartner/pg-nft.png'),
-    link: 'https://www.fstnft.com/',
+    link: '',
   },
   {
     url: require('@img/ourpartner/dappback.png'),
