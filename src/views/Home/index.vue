@@ -146,7 +146,7 @@ onMounted(() => {
       </div>
       <div class="term-item">
         <img src="@img/Pam.png" alt="" />
-        <div class="name">@Peakrach</div>
+        <div class="name">@PeakRach</div>
         <div class="office">{{ $t('home.19') }}</div>
         <div class="info">{{ $t('home.25') }}</div>
       </div>
@@ -389,7 +389,7 @@ onMounted(() => {
           </div>
           <div class="partner-item">
             <img src="@img/Pam.png" alt="" />
-            <div class="name">@Peakrach</div>
+            <div class="name">@PeakRach</div>
             <div class="office">{{ $t('home.21') }}</div>
             <div class="info">{{ $t('home.25') }}</div>
           </div>
