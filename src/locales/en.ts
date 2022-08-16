@@ -74,7 +74,7 @@ export default {
     61: 'Land Sale Begins',
     62: 'PeakBoy Crypto Game Launch and Operation ',
     63: 'PeakRach will be in charge of the marketing development. Users will be able to buy an NFT at the cost of 0.25 ETH during the public sale.',
-    64: '',
+    64: 'Contact us',
   },
   contact: {
     1: 'Peakboy support center',

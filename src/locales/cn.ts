@@ -73,7 +73,7 @@ export default {
     61: '3.0虛擬場館土地公售開啟',
     62: 'PeakBoy鏈遊啟動及運營',
     63: 'Peakrach将对接市场进⾏PeakBoyNFT1.0公售开启，⽤户花费0.25eth可于官⽹mint专属⾃⼰的匹克男孩 .',
-    64: '',
+    64: '聯繫我們',
   },
   contact: {
     1: 'Peakboy 支持中心',

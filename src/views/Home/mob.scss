@@ -419,7 +419,11 @@
       }
     }
     a {
+      display: inline-block;
+      margin-top: 30px;
       font-size: 22px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #fff;
     }
   }
 }

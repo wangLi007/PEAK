@@ -240,9 +240,9 @@ onMounted(() => {
       </div>
     </section>
     <footer>
-      <p class="text">GET IN TOUCH WITH US</p>
-      <p class="text">We'd love to hear your thoughts</p>
-      <router-link to="/contact">Contact us</router-link>
+      <p class="text">{{ $t('home.51') }}</p>
+      <p class="text">{{ $t('home.52') }}</p>
+      <router-link to="/contact">{{ $t('home.64') }}</router-link>
       <div class="bottom">
         <p>{{ $t('home.55') }}</p>
         <div class="link-wrap">
@@ -487,7 +487,7 @@ onMounted(() => {
     <footer>
       <p class="text">{{ $t('home.51') }}</p>
       <p class="text">{{ $t('home.52') }}</p>
-      <router-link to="/contact">Contact us</router-link>
+      <router-link to="/contact">{{ $t('home.64') }}</router-link>
       <div class="bottom">
         <p>{{ $t('home.55') }}</p>
         <div class="link-wrap">
