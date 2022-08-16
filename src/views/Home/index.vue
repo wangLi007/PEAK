@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { onMounted } from 'vue';
 import { useAppStore } from '@store/appStore';
+import TopBar from '@/components/TopBar/index.vue';
+import { startAnimation } from '@/utils/tools';
 
 const appStore = useAppStore();
 
@@ -27,20 +29,6 @@ const ourPartners = [
   },
 ];
 
-const startAnimation = dom => {
-  let start = Date.now();
-
-  let timer = setInterval(function () {
-    let timePassed = Date.now() - start;
-    dom.style.backgroundPositionY = timePassed / 10 + 'px';
-
-    if (timePassed > 5000) {
-      clearInterval(timer);
-      startAnimation(dom);
-    }
-  }, 20);
-};
-
 // 背景滚动
 onMounted(() => {
   const main = document.querySelector('main');
@@ -50,6 +38,8 @@ onMounted(() => {
 </script>
 
 <template>
+  <!-- top-bar -->
+  <TopBar />
   <main class="mob-main" v-if="appStore.curDevice === 'phone'">
     <div class="banner">
       <video
@@ -252,6 +242,7 @@ onMounted(() => {
     <footer>
       <p class="text">GET IN TOUCH WITH US</p>
       <p class="text">We'd love to hear your thoughts</p>
+      <router-link to="/contact">Contact us</router-link>
       <div class="bottom">
         <p>{{ $t('home.55') }}</p>
         <div class="link-wrap">
@@ -496,6 +487,7 @@ onMounted(() => {
     <footer>
       <p class="text">{{ $t('home.51') }}</p>
       <p class="text">{{ $t('home.52') }}</p>
+      <router-link to="/contact">Contact us</router-link>
       <div class="bottom">
         <p>{{ $t('home.55') }}</p>
         <div class="link-wrap">

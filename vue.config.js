@@ -19,7 +19,7 @@ module.exports = {
     },
   },
 
-  chainWebpack: (config) => {
+  chainWebpack: config => {
     // 注入cdn
     /* config.plugin('html').tap((args) => {
       // 生产环境或本地需要cdn时，才注入cdn
@@ -29,9 +29,8 @@ module.exports = {
       return args;
     }); */
   },
-  
 
-  configureWebpack: (config) => {
+  configureWebpack: config => {
     config.resolve = {
       extensions: ['.js', '.json', '.vue', '.ts'],
       alias: {
@@ -44,6 +43,12 @@ module.exports = {
         // '@contractStore': path.resolve(__dirname, './src/contractStore'),
       },
     };
+
+    config.plugins.push(
+      require('unplugin-element-plus/webpack')({
+        // options
+      })
+    );
 
     // 在生产环境
     if (isProduction) {

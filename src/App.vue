@@ -1,11 +1,9 @@
 <template>
-  <!-- top-bar -->
-  <TopBar/>
   <router-view />
 </template>
 
 <script lang="ts">
-  import TopBar from '@/components/TopBar/index.vue';
+
   import { useAppStore } from '@store/appStore';
   import { ref, nextTick } from 'vue';
   import i18n from '@/locales/i18n';
@@ -15,7 +13,6 @@
   export default {
     name: 'App',
     components: {
-      TopBar,
     },
 
     // setup() {

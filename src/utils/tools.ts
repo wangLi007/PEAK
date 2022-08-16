@@ -61,15 +61,51 @@ export async function copyToClipBoard(address) {
  * 节流
  * @param {Function} callback 回调函数
  * @param {Number} duration 节流间隔时间
+ * eg handleThrottle(args => submitForm(args), 1000);
  */
 export function handleThrottle(callback, duration = 70) {
   let throttleTimer;
-  return () => {
+  return args => {
     if (throttleTimer) return;
 
     throttleTimer = setTimeout(() => {
-      callback();
+      callback(args);
       throttleTimer = null;
     }, duration);
   };
 }
+
+/**
+ * debounce 防抖  触发高频时间后n秒内函数只会执行一次,如果n秒内高频时间再次触发,则重新计算时间。
+ * eg: const fn = debounce(fn,1000)
+ */
+export const debounce = (fn, time) => {
+  let timeout;
+  return function (arg) {
+    var args = arguments;
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+    timeout = window.setTimeout(() => {
+      fn.apply(this, args);
+    }, time);
+  };
+};
+
+/**
+ * 背景向下滚动
+ * @param dom dom元素
+ */
+export const startAnimation = dom => {
+  let start = Date.now();
+
+  let timer = setInterval(function () {
+    let timePassed = Date.now() - start;
+    dom.style.backgroundPositionY = timePassed / 10 + 'px';
+
+    if (timePassed > 5000) {
+      clearInterval(timer);
+      startAnimation(dom);
+    }
+  }, 20);
+};
