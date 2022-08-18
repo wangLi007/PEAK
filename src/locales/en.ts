@@ -82,7 +82,7 @@ export default {
     3: 'Collaboration Request',
     4: 'feedback',
     5: 'Select one of the options above to get started',
-    6: 'Make sure you visited our Help Center before submitting the request.You may also join our Discord for Additional support.',
+    6: 'You may also join our Discord for Additional support.',
     7: 'Sure! Let’s get started with some info.',
     8: 'What’s your name?',
     9: 'and email?',
