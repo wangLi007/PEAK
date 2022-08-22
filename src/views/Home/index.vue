@@ -217,8 +217,6 @@ onMounted(() => {
           </div>
           <ul>
             <li>{{ $t('home.46') }}</li>
-            <li>{{ $t('home.47') }}</li>
-            <li>{{ $t('home.59') }}</li>
             <li>{{ $t('home.48') }}</li>
             <li>{{ $t('home.49') }}</li>
             <li>{{ $t('home.50') }}</li>
@@ -461,8 +459,6 @@ onMounted(() => {
             </div>
             <ul>
               <li>{{ $t('home.46') }}</li>
-              <li>{{ $t('home.47') }}</li>
-              <li>{{ $t('home.59') }}</li>
               <li>{{ $t('home.48') }}</li>
               <li>{{ $t('home.49') }}</li>
               <li>{{ $t('home.50') }}</li>

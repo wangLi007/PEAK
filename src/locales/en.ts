@@ -56,8 +56,8 @@ export default {
     43: 'Determine Product 2.0 Launchpads',
     44: 'Product 2.0 Public Sale Begins. Airdrop Product 2.0 to Product 1.0 Holders',
     45: 'PeakBoy Upgrade',
-    46: 'Begin Funding Rounds',
-    47: 'Airdrop PBT to PeakBoy Meta Voyage Club Members',
+    46: 'PeakBoy Meta Voyage Club will release governance token in its ecosystem.    ',
+    47: '',
     48: 'Create Metaverse Space or Seek Collaboration Space, on the Decision of Club Members',
     49: 'Design and Building of PeakBoy Product 3.0 -- Land NFTs',
     50: 'PeakBoy 3.0 GameFi Development',
@@ -69,7 +69,7 @@ export default {
     56: 'GET IN TOUCH WITH US',
     57: "We'd love to hear your thoughts",
     58: 'PeakBoys are a collection of 10,000 utility-enabled NFTs based on Ethereum. The collection highlights a diverse and unique pool of traits, which is the foundation of the PeakBoy Ecosystem. NFT holders will be granted access to PeakBoy Meta Voyage Club.',
-    59: 'Determine Trading Market and Get Listed (Tier 1 DEXs Only)',
+    59: '',
     60: 'Airdrop Land NFTs to Club Members',
     61: 'Land Sale Begins',
     62: 'PeakBoy Crypto Game Launch and Operation ',
@@ -88,6 +88,7 @@ export default {
     9: 'and email?',
     10: 'Please describe your needs',
     11: 'Official mailbox:',
+
     msg: {
       1: 'Please input the email',
       2: 'Email input error',
