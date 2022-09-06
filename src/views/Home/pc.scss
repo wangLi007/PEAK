@@ -420,7 +420,10 @@
         }
         .partner-item img {
           width: 133px;
-          margin-right: 70px;
+          margin-right: 90px;
+        }
+        .partner-item:nth-child(5n) img{
+          margin-right: 0;
         }
       }
     }
