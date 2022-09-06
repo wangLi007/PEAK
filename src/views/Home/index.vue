@@ -16,6 +16,27 @@ const ourPartners = [
     link: 'https://www.element.market',
   },
   {
+    url: require('@img/ourpartner/TokenPocket.png'),
+    link: '',
+  },
+  {
+    url: require('@img/ourpartner/bit.png'),
+    link: '',
+  },
+  {
+    url: require('@img/ourpartner/dappback.png'),
+    link: '',
+  },
+  {
+    url: require('@img/ourpartner/link.png'),
+    link: '',
+  },
+  {
+    url: require('@img/ourpartner/playerone.png'),
+    link: '',
+  },
+
+  {
     url: require('@img/ourpartner/fist-nft.png'),
     link: 'https://www.fstnft.com',
   },
@@ -24,7 +45,7 @@ const ourPartners = [
     link: '',
   },
   {
-    url: require('@img/ourpartner/dappback.png'),
+    url: require('@img/ourpartner/origin_img.png'),
     link: '',
   },
 ];
@@ -201,6 +222,7 @@ onMounted(() => {
             <li>{{ $t('home.42') }}</li>
             <li>{{ $t('home.43') }}</li>
             <li>{{ $t('home.44') }}</li>
+            <li>{{ $t('home.65') }}</li>
             <li>{{ $t('home.45') }}</li>
           </ul>
         </div>
@@ -438,11 +460,14 @@ onMounted(() => {
               </div>
             </div>
             <ul>
-              <li>{{ $t('home.40') }}</li>
+              <li>
+                <div style="min-width: 300px" v-html="$t('home.40')"></div>
+              </li>
               <li>{{ $t('home.41') }}</li>
               <li>{{ $t('home.42') }}</li>
               <li>{{ $t('home.43') }}</li>
               <li>{{ $t('home.44') }}</li>
+              <li>{{ $t('home.65') }}</li>
               <li>{{ $t('home.45') }}</li>
             </ul>
           </div>

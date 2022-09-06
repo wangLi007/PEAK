@@ -364,25 +364,8 @@
     .partner-item {
       width: 50%;
       img {
-        width: 91px;
-        margin: 0 auto;
-        margin-bottom: 30px;
-      }
-      &:nth-child(1) img {
-        width: 91px;
-        margin-right: 50px;
-      }
-      &:nth-child(2) img {
-        width: 124px;
-      }
-      &:nth-child(3) img {
-        width: 114px;
-      }
-      &:nth-child(4) img {
-        width: 114px;
-      }
-      &:nth-child(5) img {
-        width: 70px;
+        width: 120px;
+        margin: 0 auto 30px !important;
       }
     }
   }
