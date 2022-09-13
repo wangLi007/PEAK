@@ -442,7 +442,7 @@
       }
     }
     .link-wrap {
-      @include flexPos(center);
+      @include flexPos(center, flex-end);
       a:nth-child(1) img {
         width: 23px;
         margin-right: 52px;
