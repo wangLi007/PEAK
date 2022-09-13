@@ -12,11 +12,11 @@ const ourPartners = [
     link: 'https://www.binance.com/zh-TW/nft/home',
   },
   {
-    url: require('@img/BAD.png'),
+    url: require('@img/ourpartner/BAD.png'),
     link: 'https://bad-hood.com',
   },
   {
-    url: require('@img/element.png'),
+    url: require('@img/ourpartner/element.png'),
     link: 'https://www.element.market',
   },
   {
@@ -50,6 +50,10 @@ const ourPartners = [
   },
   {
     url: require('@img/ourpartner/origin_img.png'),
+    link: '',
+  },
+  {
+    url: require('@img/ourpartner/voice.png'),
     link: '',
   },
 ];
