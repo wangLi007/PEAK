@@ -59,11 +59,11 @@ const ourPartners = [
 ];
 
 // 背景滚动
-// onMounted(() => {
-//   const main = document.querySelector('main');
+onMounted(() => {
+  const main = document.querySelector('main');
 
-//   startAnimation(main);
-// });
+  startAnimation(main);
+});
 </script>
 
 <template>
