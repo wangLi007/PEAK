@@ -54,7 +54,7 @@ const ourPartners = [
   },
   {
     url: require('@img/ourpartner/voice.png'),
-    link: '',
+    link: 'https://vsnft.org/#/',
   },
 ];
 
