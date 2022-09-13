@@ -8,6 +8,10 @@ const appStore = useAppStore();
 
 const ourPartners = [
   {
+    url: require('@img/ourpartner/Binance-nft.png'),
+    link: 'https://www.binance.com/zh-TW/nft/home',
+  },
+  {
     url: require('@img/BAD.png'),
     link: 'https://bad-hood.com',
   },
@@ -51,11 +55,11 @@ const ourPartners = [
 ];
 
 // 背景滚动
-onMounted(() => {
-  const main = document.querySelector('main');
+// onMounted(() => {
+//   const main = document.querySelector('main');
 
-  startAnimation(main);
-});
+//   startAnimation(main);
+// });
 </script>
 
 <template>
